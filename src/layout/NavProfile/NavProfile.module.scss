@@ -1,0 +1,30 @@
+@use "src/scss/variables.scss" as variables;
+
+.profileBtn {
+	width: 40px;
+	height: 40px;
+	background: variables.$whitish-button;
+	border-radius: 50%;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 25px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: variables.$brownish-button;
+}
+
+.profileName {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 25px;
+	align-items: center;
+	color: variables.$brownish-button;
+}
+
+.dropIcon {
+	width: 10px;
+	height: 6px;
+}
