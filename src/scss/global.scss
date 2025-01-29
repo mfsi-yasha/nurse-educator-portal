@@ -1,0 +1,21 @@
+@use "src/scss/variables.scss" as variables;
+
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+	background: variables.$light-grey;
+	min-height: 100vh;
+
+	.container-global {
+		padding-top: variables.$nav-height;
+	}
+}
+
+* {
+	font-family: "Nato Sans", sans-serif;
+}
+
+.h-0 {
+	height: 0;
+}

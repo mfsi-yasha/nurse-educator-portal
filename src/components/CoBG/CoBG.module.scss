@@ -1,0 +1,19 @@
+.cobg {
+	position: absolute;
+	img {
+		width: 630.61px;
+		height: auto;
+	}
+	top: 10px;
+	right: 0px;
+	z-index: -1;
+	overflow-x: hidden;
+
+	@media only screen and (max-width: 768px) {
+		left: 0;
+		top: 272px;
+		img {
+			width: calc(100vw + 100px);
+		}
+	}
+}
