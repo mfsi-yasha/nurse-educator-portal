@@ -1,14 +1,20 @@
-@use "src/scss/variables.scss" as variables;
+@use "src/scss/variables.scss" as *;
+@use "src/scss/fonts.scss" as *;
 
 @import "bootstrap/dist/css/bootstrap.min.css";
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 body {
-	background: variables.$light-grey;
+	background: $light-grey;
 	min-height: 100vh;
 
 	.container-global {
-		padding-top: variables.$nav-height;
+		padding-top: $nav-height;
+		padding-bottom: 110px;
+
+		@media only screen and (max-width: $grid-breakpoint-md) {
+			padding-bottom: 93px;
+		}
 	}
 }
 
@@ -18,4 +24,10 @@ body {
 
 .h-0 {
 	height: 0;
+}
+
+.btn {
+	&:focus-visible {
+		outline: auto !important;
+	}
 }

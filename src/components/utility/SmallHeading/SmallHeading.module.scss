@@ -1,0 +1,20 @@
+@use "src/scss/variables.scss" as *;
+
+.smallHeading {
+	font-style: normal;
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 32.69px;
+	letter-spacing: -0.02em;
+	color: $brownish-blackish;
+	text-align: left;
+	text-underline-position: from-font;
+	text-decoration-skip-ink: none;
+
+	@media only screen and (max-width: $grid-breakpoint-md) {
+		&.type2 {
+			font-size: 20px;
+			line-height: 27.24px;
+		}
+	}
+}

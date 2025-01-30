@@ -1,4 +1,3 @@
-import { Spinner } from "react-bootstrap";
 import styles from "./NavProfile.module.scss";
 import vector from "src/assets/images/Vector.svg";
 
@@ -19,7 +18,10 @@ function NavProfile({
 			style={{ borderColor: "transparent" }}
 		>
 			{isLoading ? (
-				<Spinner style={{ width: 40, height: 40 }} />
+				<div
+					className="spinner-border"
+					style={{ width: 40, height: 40 }}
+				/>
 			) : profileImgURL?.trim() ? (
 				<img
 					src={profileImgURL}

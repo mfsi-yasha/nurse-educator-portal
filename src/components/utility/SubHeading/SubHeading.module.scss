@@ -1,0 +1,26 @@
+@use "src/scss/variables.scss" as *;
+
+.subHeading {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 30px;
+	line-height: 41px;
+	letter-spacing: -0.02em;
+	color: $redish;
+	text-align: left;
+	text-underline-position: from-font;
+	text-decoration-skip-ink: none;
+
+	&.type2 {
+		font-weight: 400;
+	}
+
+	@media only screen and (max-width: $grid-breakpoint-md) {
+		font-size: 22px;
+		line-height: 30px;
+		&.type2 {
+			font-size: 28px;
+			line-height: 38.14px;
+		}
+	}
+}

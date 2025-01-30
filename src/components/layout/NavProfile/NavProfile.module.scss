@@ -1,9 +1,9 @@
-@use "src/scss/variables.scss" as variables;
+@use "src/scss/variables.scss" as *;
 
 .profileBtn {
 	width: 40px;
 	height: 40px;
-	background: variables.$whitish-button;
+	background: $whitish;
 	border-radius: 50%;
 	font-style: normal;
 	font-weight: 500;
@@ -12,7 +12,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: variables.$brownish-button;
+	color: $brownish-black;
 }
 
 .profileBtnImg {
@@ -27,7 +27,7 @@
 	font-size: 16px;
 	line-height: 25px;
 	align-items: center;
-	color: variables.$brownish-button;
+	color: $brownish-black;
 	width: 57px;
 }
 

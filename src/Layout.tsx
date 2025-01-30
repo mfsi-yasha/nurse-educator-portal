@@ -1,4 +1,3 @@
-import { Container } from "react-bootstrap";
 import NavBar, { NavBarButton } from "src/components/layout/NavBar/NavBar";
 import CoBG from "src/components/layout/CoBG/CoBG";
 import NavProfile from "src/components/layout/NavProfile/NavProfile";
@@ -28,12 +27,7 @@ function Layout({ children }: { children: React.ReactNode }) {
 			<CoBG />
 
 			{/* Main Content */}
-			<Container
-				fluid
-				className="container-global"
-			>
-				{children}
-			</Container>
+			<div className="container-global container-fluid">{children}</div>
 		</div>
 	);
 }

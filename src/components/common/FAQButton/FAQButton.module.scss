@@ -1,0 +1,22 @@
+@use "src/scss/variables.scss" as *;
+
+.faqButton {
+	font-style: normal;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 25px;
+	text-align: left;
+	text-underline-position: from-font;
+	text-decoration-skip-ink: none;
+	color: $brownish-black !important;
+	border-bottom: 1px solid $more-greyish !important;
+	border-radius: 0px;
+	width: 100%;
+
+	&:active {
+		border-color: transparent !important;
+	}
+	&:focus {
+		border-bottom: 1px solid $more-greyish !important;
+	}
+}

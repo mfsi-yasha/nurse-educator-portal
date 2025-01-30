@@ -1,0 +1,36 @@
+@use "src/scss/variables.scss" as *;
+
+.whiteShadow {
+	background: $white;
+	box-shadow: 0px 4px 8px $transparent-black;
+	border-radius: 8px;
+}
+
+.lightTomato {
+	background: $light-tomato;
+	border-radius: 10px;
+}
+
+.lessLightGrey {
+	background: $less-light-grey;
+	border-radius: 20px;
+}
+
+.headingContainer {
+	background: $white;
+	border: 1.5px solid $black;
+	border-radius: 10px;
+
+	.heading {
+		font-family: "Roboto", sans-serif;
+		font-style: normal;
+		font-size: 15px;
+		font-weight: 700;
+		line-height: 17.58px;
+		text-align: left;
+		text-underline-position: from-font;
+		text-decoration-skip-ink: none;
+		color: $black;
+		border-bottom: 1.5px solid $black;
+	}
+}

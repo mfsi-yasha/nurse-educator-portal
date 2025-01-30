@@ -1,0 +1,26 @@
+@use "src/scss/variables.scss" as *;
+
+.tab {
+	background: $less-light-grey !important;
+	border-radius: 5px 5px 0px 0px;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 27.24px;
+	letter-spacing: -0.02em;
+	color: $brownish-blackish !important;
+	text-align: left;
+	text-underline-position: from-font;
+	text-decoration-skip-ink: none;
+	height: 50px;
+	border: none !important;
+
+	&:active {
+		border-color: transparent !important;
+	}
+
+	&.active {
+		font-weight: 700;
+		background: $white !important;
+	}
+}

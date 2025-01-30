@@ -1,3 +1,5 @@
+@use "src/scss/variables.scss" as *;
+
 .cobg {
 	position: absolute;
 	img {
@@ -9,9 +11,9 @@
 	z-index: -1;
 	overflow-x: hidden;
 
-	@media only screen and (max-width: 768px) {
+	@media only screen and (max-width: $grid-breakpoint-md) {
 		left: 0;
-		top: 272px;
+		top: 230px;
 		img {
 			width: calc(100vw + 100px);
 		}
