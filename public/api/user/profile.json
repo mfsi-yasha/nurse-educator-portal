@@ -1,0 +1,9 @@
+{
+	"err": false,
+	"message": "Success.",
+	"data": {
+		"id": "1",
+		"name": "Martin",
+		"profileImgURL": "/media/images/profile.svg"
+	}
+}

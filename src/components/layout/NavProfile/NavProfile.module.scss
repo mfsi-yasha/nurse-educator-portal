@@ -15,6 +15,12 @@
 	color: variables.$brownish-button;
 }
 
+.profileBtnImg {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
 .profileName {
 	font-style: normal;
 	font-weight: 500;
@@ -22,6 +28,7 @@
 	line-height: 25px;
 	align-items: center;
 	color: variables.$brownish-button;
+	width: 57px;
 }
 
 .dropIcon {

@@ -1,10 +1,37 @@
 import { useState } from "react";
-import NavProfile from "../NavProfile/NavProfile";
 import styles from "./NavBar.module.scss";
 import headingImg from "src/assets/images/ConnectPatient.svg";
 import menuImg from "src/assets/images/Menu.svg";
 
-function NavBar() {
+export function NavBarButton({
+	text,
+	isActive = false,
+	className,
+	...props
+}: {
+	text: string;
+	isActive?: boolean;
+} & React.DetailedHTMLProps<
+	React.ButtonHTMLAttributes<HTMLButtonElement>,
+	HTMLButtonElement
+>) {
+	return (
+		<button
+			className={`btn ${styles.navButton} ${isActive ? styles.active : ""} ${className ?? ""}`}
+			{...props}
+		>
+			{text}
+		</button>
+	);
+}
+
+function NavBar({
+	children,
+	profile,
+}: {
+	children: React.ReactNode;
+	profile: React.ReactNode;
+}) {
 	const [showMenu, setShowMenu] = useState(false);
 
 	return (
@@ -21,13 +48,9 @@ function NavBar() {
 			/>
 			<div className="d-flex column-gap-2 column-gap-md-5">
 				<div
-					className={`${styles.navMenu} ${showMenu ? "" : styles.activeMenu} d-md-flex flex-row flex-md-col gap-1 me-md-5`}
+					className={`${styles.navMenu} ${showMenu ? styles.activeMenu : ""} d-md-flex flex-row flex-md-col gap-1 me-md-5`}
 				>
-					<button className={`btn ${styles.navButton} ${styles.active}`}>
-						Home
-					</button>
-					<button className={`btn ${styles.navButton}`}>FAQ</button>
-					<button className={`btn ${styles.navButton}`}>Help</button>
+					{children}
 				</div>
 				<button
 					className="btn d-flex d-md-none justify-content-center align-items-center"
@@ -44,7 +67,7 @@ function NavBar() {
 						height={24}
 					/>
 				</button>
-				<NavProfile />
+				{profile}
 			</div>
 		</div>
 	);
