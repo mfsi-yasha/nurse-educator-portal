@@ -1,0 +1,26 @@
+{
+	"err": false,
+	"message": "Success.",
+	"data": [
+		{
+			"id": "1",
+			"title": "How to stay in control",
+			"imageURL": "/media/images/i-can-do-it.png"
+		},
+		{
+			"id": "2",
+			"title": "Why Hydration is Important",
+			"imageURL": "/media/images/skincare.png"
+		},
+		{
+			"id": "3",
+			"title": "Avoiding the challenges",
+			"imageURL": "/media/images/arthircover.png"
+		},
+		{
+			"id": "4",
+			"title": "New Year Reflections",
+			"imageURL": "/media/images/diet.png"
+		}
+	]
+}

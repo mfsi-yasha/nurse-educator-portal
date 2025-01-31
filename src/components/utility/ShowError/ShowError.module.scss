@@ -1,0 +1,10 @@
+@use "src/scss/variables.scss" as *;
+
+.error {
+	font-family: "Roboto", sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 17.58px;
+	color: $redish;
+}

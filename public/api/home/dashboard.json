@@ -1,0 +1,26 @@
+{
+	"err": false,
+	"message": "Success.",
+	"data": {
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididuntLorem ipsum dolor sit ame onsectetur adip.",
+		"services": [
+			{
+				"id": "1",
+				"serviceType": "requestConsultation",
+				"title": "Request a consult with one of our qualified nurses",
+				"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+			},
+			{
+				"id": "2",
+				"serviceType": "setupReminder",
+				"title": "Set up a reminder so your don’t miss an appointment or treatment",
+				"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+			}
+		],
+		"chatWithUs": {
+			"operatingHoursStart": "9am",
+			"operatingHoursEnd": "5.30pm",
+			"timezone": "Australian Eastern Time"
+		}
+	}
+}

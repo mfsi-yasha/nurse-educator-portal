@@ -2,16 +2,55 @@ import HLine from "src/components/utility/HLine/HLine";
 import Paragraph from "src/components/utility/Paragraph/Paragraph";
 import Buttons from "src/components/utility/Buttons/Buttons";
 import SmallHeading from "src/components/utility/SmallHeading/SmallHeading";
-import SubHeading from "src/components/utility/SubHeading/SubHeading";
+import useDashboard from "src/hooks/home/useDashboard";
+import NoDataFound from "src/components/utility/NoDataFound/NoDataFound";
+import ShowError from "src/components/utility/ShowError/ShowError";
 
 function Services() {
+	const { dashboardData, dashboardFetchStatus } = useDashboard();
+
+	if (dashboardFetchStatus === "error") {
+		return (
+			<div
+				className="d-flex justify-content-center align-items-center"
+				style={{ height: "100px" }}
+			>
+				<ShowError className="text-center">
+					Error loading content.
+					<br />
+					Check your network or try again later!
+				</ShowError>
+			</div>
+		);
+	}
+
+	if (dashboardFetchStatus === "pending") {
+		return (
+			<div
+				className="d-flex justify-content-center align-items-center"
+				style={{ height: "100px" }}
+			>
+				<div
+					className="spinner-border"
+					style={{ width: 40, height: 40 }}
+				/>
+			</div>
+		);
+	}
+
+	if ((dashboardData?.services?.length ?? 0) === 0) {
+		return (
+			<div
+				className="d-flex justify-content-center align-items-center"
+				style={{ height: "100px" }}
+			>
+				<NoDataFound text="No Data Found" />
+			</div>
+		);
+	}
+
 	return (
-		<div className="px-1 px-md-3">
-			<SubHeading
-				text="Services"
-				type="type2"
-				className="mt-3 mt-md-5"
-			/>
+		<>
 			<SmallHeading
 				text={"Request a consult with one of our qualified nurses"}
 			/>
@@ -48,7 +87,7 @@ function Services() {
 					text="Set up now"
 				/>
 			</div>
-		</div>
+		</>
 	);
 }
 

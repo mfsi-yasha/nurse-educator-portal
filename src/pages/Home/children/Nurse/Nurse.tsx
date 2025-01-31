@@ -1,9 +1,81 @@
+import { useState } from "react";
 import CustomBtns from "src/components/common/CustomBtns/CustomBtns";
 import Containers from "src/components/layout/Containers/Containers";
+import NoDataFound from "src/components/utility/NoDataFound/NoDataFound";
 import Paragraph from "src/components/utility/Paragraph/Paragraph";
 import ReadMore from "src/components/utility/ReadMore/ReadMore";
+import ShowError from "src/components/utility/ShowError/ShowError";
 import SubHeading from "src/components/utility/SubHeading/SubHeading";
 import FAQList from "src/features/FAQList/FAQList";
+import useNurse from "src/hooks/home/useNurse";
+
+function AllParagraphs() {
+	const { nurseData, nurseFetchStatus } = useNurse();
+	const [showMore, setShowMore] = useState(false);
+
+	if (nurseFetchStatus === "error") {
+		return (
+			<div
+				className="d-flex justify-content-center align-items-center"
+				style={{ height: "50px" }}
+			>
+				<ShowError className="text-center">
+					Error loading content.
+					<br />
+					Check your network or try again later!
+				</ShowError>
+			</div>
+		);
+	}
+
+	if (nurseFetchStatus === "pending") {
+		return (
+			<div
+				className="d-flex justify-content-center align-items-center"
+				style={{ height: "50px" }}
+			>
+				<div
+					className="spinner-border"
+					style={{ width: 40, height: 40 }}
+				/>
+			</div>
+		);
+	}
+
+	if ((nurseData?.length ?? 0) === 0) {
+		return (
+			<div
+				className="d-flex justify-content-center align-items-center"
+				style={{ height: "50px" }}
+			>
+				<NoDataFound text="No Data Found" />
+			</div>
+		);
+	}
+
+	return (
+		<>
+			<div className={`${showMore ? "" : "mb-3 clipped-text"}`}>
+				{nurseData?.map(nurseV => {
+					return (
+						<Paragraph
+							key={nurseV.id}
+							keepItSmall={true}
+							text={nurseV.paragraph}
+						/>
+					);
+				})}
+			</div>
+			<ReadMore
+				text={showMore ? "Read Less" : "Read More"}
+				rotate={showMore ? "up" : "down"}
+				onClick={() => {
+					setShowMore(v => !v);
+				}}
+			/>
+		</>
+	);
+}
 
 function Nurse() {
 	return (
@@ -25,16 +97,7 @@ function Nurse() {
 							className="mb-3"
 							text="Nurse education service"
 						/>
-						<Paragraph
-							keepItSmall={true}
-							text={
-								"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididuntLorem ipsum dolor sit ame onsectetur adip."
-							}
-						/>
-						<ReadMore
-							text="Read More"
-							rotate="down"
-						/>
+						<AllParagraphs />
 					</div>
 					<div className="p-0 col-4 d-none d-md-flex flex-column gap-1">
 						<FAQList />
