@@ -9,7 +9,7 @@ body {
 	min-height: 100vh;
 
 	.container-global {
-		padding-top: $nav-height;
+		// padding-top: $nav-height;
 		padding-bottom: 110px;
 
 		@media only screen and (max-width: $grid-breakpoint-md) {

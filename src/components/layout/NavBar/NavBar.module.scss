@@ -1,7 +1,8 @@
 @use "src/scss/variables.scss" as *;
 
 .navbar {
-	position: absolute;
+	position: sticky;
+	z-index: 100;
 	height: $nav-height;
 	left: 0px;
 	top: 0px;
