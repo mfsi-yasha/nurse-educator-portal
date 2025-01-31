@@ -7,9 +7,15 @@ import NoDataFound from "src/components/utility/NoDataFound/NoDataFound";
 import ShowError from "src/components/utility/ShowError/ShowError";
 import { Fragment } from "react/jsx-runtime";
 
+/**
+ * A component that displays a list of services fetched from the dashboard.
+ * It handles loading, error, and empty data states, and renders the service information.
+ */
 function Services() {
+	// Destructure the dashboard data and fetch status from the custom hook
 	const { dashboardData, dashboardFetchStatus } = useDashboard();
 
+	// Display error message when fetching data fails
 	if (dashboardFetchStatus === "error") {
 		return (
 			<div
@@ -25,6 +31,7 @@ function Services() {
 		);
 	}
 
+	// Display loading spinner while data is being fetched
 	if (dashboardFetchStatus === "pending") {
 		return (
 			<div
@@ -39,6 +46,7 @@ function Services() {
 		);
 	}
 
+	// Display a message if no services data is available
 	if ((dashboardData?.services?.length ?? 0) === 0) {
 		return (
 			<div
@@ -50,6 +58,7 @@ function Services() {
 		);
 	}
 
+	// Render each service item in the services list
 	return (
 		<>
 			{dashboardData?.services.map((serviceV, index) => {
@@ -76,6 +85,7 @@ function Services() {
 								}
 							/>
 						</div>
+						{/* Render horizontal line except for the last service */}
 						{index + 1 < dashboardData.services.length && (
 							<HLine className="d-none d-md-block" />
 						)}
