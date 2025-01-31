@@ -9,10 +9,15 @@ import SubHeading from "src/components/utility/SubHeading/SubHeading";
 import FAQList from "src/features/FAQList/FAQList";
 import useNurse from "src/hooks/home/useNurse";
 
+/**
+ * A component that displays paragraphs of text related to nurse education services.
+ * It handles loading, error, and empty states, and allows users to toggle the visibility of additional text.
+ */
 function AllParagraphs() {
 	const { nurseData, nurseFetchStatus } = useNurse();
 	const [showMore, setShowMore] = useState(false);
 
+	// Display error message when fetching nurse data fails
 	if (nurseFetchStatus === "error") {
 		return (
 			<div
@@ -28,6 +33,7 @@ function AllParagraphs() {
 		);
 	}
 
+	// Display loading spinner while nurse data is being fetched
 	if (nurseFetchStatus === "pending") {
 		return (
 			<div
@@ -42,6 +48,7 @@ function AllParagraphs() {
 		);
 	}
 
+	// Display a message if no nurse data is available
 	if ((nurseData?.length ?? 0) === 0) {
 		return (
 			<div
@@ -53,6 +60,7 @@ function AllParagraphs() {
 		);
 	}
 
+	// Render paragraphs and allow toggling between "Read More" / "Read Less"
 	return (
 		<>
 			<div className={`${showMore ? "" : "mb-3 clipped-text"}`}>
@@ -77,9 +85,15 @@ function AllParagraphs() {
 	);
 }
 
+/**
+ * A component that displays the nurse education service page, including the main content and a FAQ section.
+ * It shows the "Nurse education service" heading, the paragraphs from the `AllParagraphs` component,
+ * and a list of frequently asked questions.
+ */
 function Nurse() {
 	return (
 		<div>
+			{/* Navigation buttons for switching between nurse and history */}
 			<div className="d-flex gap-2 mb-5 mb-md-4">
 				<CustomBtns
 					isActive={true}
@@ -90,8 +104,10 @@ function Nurse() {
 					varient="history"
 				/>
 			</div>
+			{/* Nurse education service content container */}
 			<Containers.ColorContainer className="p-3 w-100 mb-4">
 				<div className="m-0 p-0 px-1 px-md-3 row justify-content-between">
+					{/* Main content section for nurse education */}
 					<div className="p-0 col-12 col-md-6">
 						<SubHeading
 							className="mb-3"
@@ -99,6 +115,7 @@ function Nurse() {
 						/>
 						<AllParagraphs />
 					</div>
+					{/* FAQ section displayed on larger screens */}
 					<div className="p-0 col-4 d-none d-md-flex flex-column gap-1">
 						<FAQList />
 					</div>

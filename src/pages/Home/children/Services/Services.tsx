@@ -5,10 +5,17 @@ import SmallHeading from "src/components/utility/SmallHeading/SmallHeading";
 import useDashboard from "src/hooks/home/useDashboard";
 import NoDataFound from "src/components/utility/NoDataFound/NoDataFound";
 import ShowError from "src/components/utility/ShowError/ShowError";
+import { Fragment } from "react/jsx-runtime";
 
+/**
+ * A component that displays a list of services fetched from the dashboard.
+ * It handles loading, error, and empty data states, and renders the service information.
+ */
 function Services() {
+	// Destructure the dashboard data and fetch status from the custom hook
 	const { dashboardData, dashboardFetchStatus } = useDashboard();
 
+	// Display error message when fetching data fails
 	if (dashboardFetchStatus === "error") {
 		return (
 			<div
@@ -24,6 +31,7 @@ function Services() {
 		);
 	}
 
+	// Display loading spinner while data is being fetched
 	if (dashboardFetchStatus === "pending") {
 		return (
 			<div
@@ -38,6 +46,7 @@ function Services() {
 		);
 	}
 
+	// Display a message if no services data is available
 	if ((dashboardData?.services?.length ?? 0) === 0) {
 		return (
 			<div
@@ -49,44 +58,40 @@ function Services() {
 		);
 	}
 
+	// Render each service item in the services list
 	return (
 		<>
-			<SmallHeading
-				text={"Request a consult with one of our qualified nurses"}
-			/>
-			<div className="mb-5 mb-md-2 p-0 m-0 row flex-column flex-md-row justify-content-between">
-				<Paragraph
-					className="col-12 col-md-7 p-0"
-					keepItSmall={true}
-					text={
-						"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididuntLorem ipsum dolor sit ame onsectetur adip."
-					}
-				/>
-				<Buttons
-					className="me-4 my-auto"
-					text="Request now"
-				/>
-			</div>
-			<HLine className="d-none d-md-block" />
-			<SmallHeading
-				className="mt-5 mt-md-3"
-				text={
-					"Set up a reminder so your don’t miss an appointment or treatment"
-				}
-			/>
-			<div className="p-0 m-0 row flex-column flex-md-row justify-content-between">
-				<Paragraph
-					className="col-12 col-md-7 p-0"
-					keepItSmall={true}
-					text={
-						"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididuntLorem ipsum dolor sit ame onsectetur adip."
-					}
-				/>
-				<Buttons
-					className="me-4 my-auto"
-					text="Set up now"
-				/>
-			</div>
+			{dashboardData?.services.map((serviceV, index) => {
+				return (
+					<Fragment key={serviceV.id}>
+						<SmallHeading
+							className={index === 0 ? "" : "mt-5 mt-md-3"}
+							text={serviceV.title}
+						/>
+						<div
+							className={`${index + 1 === dashboardData.services.length ? "" : "mb-5 mb-md-2"} p-0 m-0 row flex-column flex-md-row justify-content-between`}
+						>
+							<Paragraph
+								className="col-12 col-md-7 p-0"
+								keepItSmall={true}
+								text={serviceV.description}
+							/>
+							<Buttons
+								className="me-4 my-auto"
+								text={
+									serviceV.serviceType === "requestConsultation"
+										? "Request now"
+										: "Set up now"
+								}
+							/>
+						</div>
+						{/* Render horizontal line except for the last service */}
+						{index + 1 < dashboardData.services.length && (
+							<HLine className="d-none d-md-block" />
+						)}
+					</Fragment>
+				);
+			})}
 		</>
 	);
 }
