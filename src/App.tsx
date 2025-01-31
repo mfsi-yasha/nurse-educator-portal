@@ -1,21 +1,15 @@
-import { Container } from "react-bootstrap";
-import NavBar from "src/layout/NavBar/NavBar";
-import CoBG from "./components/CoBG/CoBG";
+import { QueryClientProvider } from "@tanstack/react-query";
+import queryClient from "src/globals/queryClient";
+import Layout from "src/Layout";
+import Home from "./pages/Home/Home";
 
 function App() {
 	return (
-		<div>
-			{/* Navbar */}
-			<NavBar />
-			<CoBG />
-
-			{/* Main Content */}
-			<Container
-				fluid
-				className="container-global"
-				style={{ height: "200vh" }}
-			></Container>
-		</div>
+		<QueryClientProvider client={queryClient}>
+			<Layout>
+				<Home />
+			</Layout>
+		</QueryClientProvider>
 	);
 }
 

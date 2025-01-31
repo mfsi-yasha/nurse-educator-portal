@@ -1,0 +1,22 @@
+.player {
+	position: relative;
+	width: 100%;
+	height: auto;
+
+	img,
+	video {
+		width: 100%;
+		height: auto;
+		border-radius: 10px;
+	}
+
+	.playPauseIcon {
+		position: absolute;
+		width: 63px;
+		height: 63px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		cursor: pointer;
+	}
+}

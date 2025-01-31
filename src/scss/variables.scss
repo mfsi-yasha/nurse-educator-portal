@@ -1,12 +1,27 @@
-// Body
+// Break points
+$grid-breakpoint-xs: 0;
+$grid-breakpoint-sm: 576px;
+$grid-breakpoint-md: 768px;
+$grid-breakpoint-lg: 992px;
+$grid-breakpoint-xl: 1200px;
+$grid-breakpoint-xxl: 1400px;
+
+// Colors
+$white: #ffffff;
+$whitish: #eeeeee;
+$less-light-grey: #f0f0f0;
 $light-grey: #faf8f7;
+$greyish: #dedede;
+$more-greyish: #949494;
+$less-transparent-black: rgba(0, 0, 0, 0.32);
+$transparent-black: rgba(0, 0, 0, 0.1);
+$brownish-black: #1a1a1a;
+$brownish-blackish: #0a0a0a;
+$black: #000000;
+$redish: #be0028;
+$light-tomato: #f5e4e6;
+$greenish: #006373;
+$bluish: #0077b6;
 
 // NavBar component
-$white: #ffffff;
-$nav-shadow: rgba(0, 0, 0, 0.1);
-$red-active: #be0028;
-$brownish-button: #1a1a1a;
 $nav-height: 60px;
-
-// NavProfile component
-$whitish-button: #eeeeee;

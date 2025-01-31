@@ -1,0 +1,38 @@
+@use "src/scss/variables.scss" as *;
+
+.redLessCurvy {
+	width: 173px;
+	height: 45px;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 25px;
+	color: $white !important;
+	background: $redish !important;
+	border: none !important;
+	border-radius: 6px;
+	text-align: center;
+
+	&:active {
+		border-color: transparent !important;
+	}
+}
+
+.whiteCurvy {
+	width: 155px;
+	height: 39px;
+	background: $white !important;
+	border-radius: 60px;
+	font-family: "Frutiger LT Std", sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 19.2px;
+	text-align: center;
+	color: $greenish !important;
+	border: none !important;
+
+	&:active {
+		border-color: transparent !important;
+	}
+}

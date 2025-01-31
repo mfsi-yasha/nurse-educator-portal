@@ -1,0 +1,37 @@
+@use "src/scss/variables.scss" as *;
+
+.profileBtn {
+	width: 40px;
+	height: 40px;
+	background: $whitish;
+	border-radius: 50%;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 25px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: $brownish-black;
+}
+
+.profileBtnImg {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+.profileName {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 25px;
+	align-items: center;
+	color: $brownish-black;
+	width: 57px;
+}
+
+.dropIcon {
+	width: 10px;
+	height: 6px;
+}

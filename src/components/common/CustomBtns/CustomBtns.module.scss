@@ -1,0 +1,34 @@
+@use "src/scss/variables.scss" as *;
+
+.customBtn {
+	height: 32px;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 22px;
+	line-height: 25px;
+	color: $more-greyish !important;
+	text-align: left;
+	text-underline-position: from-font;
+	text-decoration-skip-ink: none;
+	border: none !important;
+	border-bottom: 2px solid transparent !important;
+	border-radius: 0px;
+
+	&:active {
+		border-color: transparent !important;
+	}
+
+	svg {
+		fill: $more-greyish;
+	}
+
+	&.active {
+		font-weight: 700;
+		color: $bluish !important;
+		border-bottom: 2px solid $bluish !important;
+
+		svg {
+			fill: $bluish;
+		}
+	}
+}

@@ -1,0 +1,15 @@
+@use "src/scss/variables.scss" as *;
+
+.readMore {
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 25px;
+	text-align: left;
+	text-underline-position: from-font;
+	text-decoration-skip-ink: none;
+	color: $redish !important;
+
+	&:active {
+		border-color: transparent !important;
+	}
+}
