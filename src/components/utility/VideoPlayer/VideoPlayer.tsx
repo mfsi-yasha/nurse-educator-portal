@@ -16,7 +16,7 @@ function VideoPlayer({
 			{!showVideo && (
 				<img
 					src={thumbnilURL}
-					alt=""
+					alt="thumbnil"
 					width={581}
 					height={306}
 					loading="lazy"
@@ -24,6 +24,7 @@ function VideoPlayer({
 			)}
 			{showVideo && (
 				<video
+					data-testid="video-player-element"
 					src={videoURL}
 					width={581}
 					height={306}
@@ -35,7 +36,7 @@ function VideoPlayer({
 				<img
 					className={`${styles.playPauseIcon}`}
 					src={play}
-					alt=""
+					alt="play"
 					width={63}
 					height={63}
 					loading="lazy"

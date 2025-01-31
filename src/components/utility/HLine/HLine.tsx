@@ -9,6 +9,7 @@ function HLine({
 >) {
 	return (
 		<div
+			data-testid="HLine-Element"
 			className={`${styles.hLine} ${className ?? ""}`}
 			{...props}
 		/>

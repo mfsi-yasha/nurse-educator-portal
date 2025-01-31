@@ -17,7 +17,10 @@ function Dashboard() {
 	const { profileData } = useProfile();
 
 	return (
-		<div className="row p-3 m-0 pb-5 pb-md-3">
+		<div
+			data-testid="dashboard-element"
+			className="row p-3 m-0 pb-5 pb-md-3"
+		>
 			{/* Main section for welcome message and services */}
 			<div className="col-12 col-md-8 p-0">
 				{/* Welcome message with user's name and dashboard description */}

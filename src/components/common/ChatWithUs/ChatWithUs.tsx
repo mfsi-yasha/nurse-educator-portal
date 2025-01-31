@@ -25,7 +25,7 @@ function ChatWithUs({
 			<div className={`mb-3 px-1 d-flex gap-2 ${styles.heading}`}>
 				<img
 					src={messageIcon}
-					alt=""
+					alt="messageIcon"
 					loading="lazy"
 					width={30}
 					height={30}

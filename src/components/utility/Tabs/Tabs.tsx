@@ -18,6 +18,7 @@ function Tabs({
 			{tabs.map(tab => {
 				return (
 					<button
+						data-testid={tab.key}
 						key={tab.key}
 						className={`col-6 p-0 btn ${tabClassName ?? ""} ${styles.tab} ${activeTab === tab.key ? styles.active : ""}`}
 						onClick={() => {

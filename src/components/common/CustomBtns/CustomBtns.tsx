@@ -38,6 +38,7 @@ function CustomBtns({
 >) {
 	return (
 		<button
+			data-testid="custom-button-element"
 			className={`p-0 px-2 btn ${className ?? ""} ${styles.customBtn} ${isActive ? styles.active : ""} d-flex justify-content-center align-items-center gap-2`}
 			{...props}
 		>

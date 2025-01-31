@@ -27,7 +27,12 @@ function Layout({ children }: { children: React.ReactNode }) {
 			<CoBG />
 
 			{/* Main Content */}
-			<div className="container-global container-fluid">{children}</div>
+			<div
+				data-testid="container-element"
+				className="container-global container-fluid"
+			>
+				{children}
+			</div>
 		</div>
 	);
 }

@@ -13,7 +13,10 @@ function GettingStarted() {
 	const { gettingStartedData } = useGettingStarted();
 
 	return (
-		<div className="p-3 m-0">
+		<div
+			data-testid="getting-started-element"
+			className="p-3 m-0"
+		>
 			{/* Welcome section displaying a heading and subheading */}
 			<Welcome
 				heading="Help getting started"
