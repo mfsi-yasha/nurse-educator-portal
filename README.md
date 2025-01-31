@@ -5,6 +5,7 @@
 The **Nurse Educator Portal** is a web-based platform designed to assist in the training, education, and management of nursing staff. It provides various features like nurse call booking, articles, FAQs, reminders, and much more. The portal offers an intuitive layout with a clean user interface to make navigation simple and efficient.
 
 ---
+
 ## Getting Started
 
 To get started with the project, follow these steps:
@@ -27,6 +28,7 @@ npm install
 ```bash
 npm run dev
 ```
+
 This will start the Vite development server.
 
 ### 4. Production build
@@ -34,11 +36,13 @@ This will start the Vite development server.
 ```bash
 npm run build
 ```
+
 ### 5. Run the build
 
 ```bash
 npm run preview
 ```
+
 ---
 
 ## License
@@ -46,6 +50,7 @@ npm run preview
 This project is open-source and available under the [MIT License](LICENSE).
 
 ---
+
 ## Tech Stack
 
 The **Nurse Educator Portal** is built using modern technologies that offer fast, scalable, and efficient web development. Below is the tech stack used in this project:
@@ -54,7 +59,6 @@ The **Nurse Educator Portal** is built using modern technologies that offer fast
 
 - **React**:  
   A popular JavaScript library for building user interfaces, React allows us to create dynamic, component-based structures. It's the core library for rendering UI in this project.
-  
 - **Vite**:  
   A fast and modern build tool that provides a better development experience by offering features like fast hot module replacement (HMR), optimized builds, and a smooth workflow.
 
@@ -115,17 +119,17 @@ The project follows a modular structure that divides the code into various secti
 
 - **`public/`**  
   Contains static assets such as fonts, media (images, videos), and API folders for features like home, user, and features.
-  
-  - `api/`  
+
+  - `api/`
     - `features/`, `home/`, `user/` — API data definitions for respective features.
-  - `fonts/`  
+  - `fonts/`
     - `frutiger-lt-std-font/` — The font used in the application.
-  - `media/`  
+  - `media/`
     - `images/`, `videos/` — Static media files for the portal.
 
 - **`src/`**  
   Contains the main source code for the project.
-  
+
   - `apis/`  
     Contains code for API calls for features like home, user, and features.
   - `assets/`  
@@ -146,4 +150,5 @@ The project follows a modular structure that divides the code into various secti
     Contains the pages and their child components for different sections like `Home`, `Dashboard`, `GettingStarted`, etc.
   - `scss/`  
     Contains all the global SCSS files for the application.
+
 ---
