@@ -6,9 +6,12 @@ import ChatWithUs from "src/components/common/ChatWithUs/ChatWithUs";
 
 function Dashboard() {
 	return (
-		<div className="row p-3 m-0">
+		<div className="row p-3 m-0 pb-5 pb-md-3">
 			<div className="col-12 col-md-8 p-0">
-				<Welcome />
+				<Welcome
+					heading="Welcome Claire"
+					subHeading="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididuntLorem ipsum dolor sit ame onsectetur adip."
+				/>
 				<Services />
 			</div>
 			<div className="col-12 col-md-4 px-1 p-md-4 mt-5 mt-md-0">

@@ -5,7 +5,7 @@ function SmallHeading({
 	type,
 	className,
 	...props
-}: { text: string; type?: "type2" } & React.DetailedHTMLProps<
+}: { text: string; type?: "type2" | "type3Apis" } & React.DetailedHTMLProps<
 	React.HTMLAttributes<HTMLHeadingElement>,
 	HTMLHeadingElement
 >) {

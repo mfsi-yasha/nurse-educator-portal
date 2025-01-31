@@ -5,6 +5,7 @@ import Containers from "src/components/layout/Containers/Containers";
 import Nurse from "./children/Nurse/Nurse";
 import Dashboard from "./children/Dashboard/Dashboard";
 import Tabs from "src/components/utility/Tabs/Tabs";
+import GettingStarted from "./children/GettingStarted/GettingStarted";
 
 function Home() {
 	const [activeTab, setActiveTab] = useState("dashboard");
@@ -26,7 +27,7 @@ function Home() {
 			</div>
 
 			<div className="px-2 pb-2">
-				<Containers.ColorContainer className="pb-5 w-100">
+				<Containers.ColorContainer className="pb-3 w-100">
 					<Tabs
 						tabs={[
 							{ text: "Dashboard", key: "dashboard" },
@@ -37,7 +38,7 @@ function Home() {
 						activeTab={activeTab}
 						setActiveTab={setActiveTab}
 					/>
-					<Dashboard />
+					{activeTab === "dashboard" ? <Dashboard /> : <GettingStarted />}
 				</Containers.ColorContainer>
 			</div>
 		</div>

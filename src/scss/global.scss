@@ -15,6 +15,21 @@ body {
 		@media only screen and (max-width: $grid-breakpoint-md) {
 			padding-bottom: 93px;
 		}
+
+		.getting-started-sub-heading-2 {
+			border-left: 1.5px solid $greyish;
+
+			@media only screen and (max-width: $grid-breakpoint-md) {
+				border-left: 0px solid transparent;
+			}
+		}
+
+		.getting-started-article-list {
+			grid-template-columns: repeat(1, 1fr);
+			@media (min-width: 768px) {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
 	}
 }
 

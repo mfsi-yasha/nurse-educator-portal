@@ -11,6 +11,15 @@
 	text-underline-position: from-font;
 	text-decoration-skip-ink: none;
 
+	&.type3Apis {
+		font-family: "Apis", sans-serif;
+		font-size: 24px;
+		font-weight: 500;
+		line-height: 32.69px;
+		letter-spacing: 0em;
+		color: $black;
+	}
+
 	@media only screen and (max-width: $grid-breakpoint-md) {
 		&.type2 {
 			font-size: 20px;
