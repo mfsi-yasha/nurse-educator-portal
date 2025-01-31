@@ -1,0 +1,18 @@
+{
+	"err": false,
+	"message": "Success.",
+	"data": [
+		{
+			"id": "1",
+			"title": "Frequently asked questions #01"
+		},
+		{
+			"id": "2",
+			"title": "Frequently asked questions #02"
+		},
+		{
+			"id": "3",
+			"title": "Frequently asked questions #03"
+		}
+	]
+}

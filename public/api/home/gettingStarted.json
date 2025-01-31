@@ -1,0 +1,13 @@
+{
+	"err": false,
+	"message": "Success.",
+	"data": {
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididuntLorem ipsum dolor sit ame onsectetur adip. Sed do eiusmod tempor incididunt Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididuntLorem ipsum dolor sit ame onsectetur adip.",
+		"aboutMedication": {
+			"thumbnilURL": "/media/images/depositphotos_282401614-stock-photo-asian-senior-doctor-and-patient.png",
+			"videoURL": "/media/videos/mov_bbb.mp4",
+			"title": "Learn about your medication",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+		}
+	}
+}

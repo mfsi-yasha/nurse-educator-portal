@@ -1,14 +1,17 @@
 import SubHeading from "src/components/utility/SubHeading/SubHeading";
 import Welcome from "../Welcome/Welcome";
-import AboutMedication from "src/features/AboutMedication/AboutMedication";
+import AboutMedication from "src/pages/Home/children/AboutMedication/AboutMedication";
 import ArticleList from "src/features/ArticleList/ArticleList";
+import useGettingStarted from "src/hooks/home/useGettingStarted";
 
 function GettingStarted() {
+	const { gettingStartedData } = useGettingStarted();
+
 	return (
 		<div className="p-3 m-0">
 			<Welcome
 				heading="Help getting started"
-				subHeading="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididuntLorem ipsum dolor sit ame onsectetur adip."
+				subHeading={gettingStartedData?.description ?? ""}
 				keepColFull={true}
 			/>
 			<div className="row m-0 p-0 px-1 px-md-3">

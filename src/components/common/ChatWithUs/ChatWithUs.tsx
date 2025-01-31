@@ -1,3 +1,4 @@
+import { ChatWithUsI } from "src/apis/home/dashboard.api";
 import Containers from "src/components/layout/Containers/Containers";
 import Buttons from "src/components/utility/Buttons/Buttons";
 import styles from "./ChatWithUs.module.scss";
@@ -10,14 +11,12 @@ function ChatWithUs({
 	handleChat,
 	...props
 }: {
-	operatingHoursStart: string;
-	operatingHoursEnd: string;
-	timezone: string;
 	handleChat: () => void;
-} & React.DetailedHTMLProps<
-	React.HTMLAttributes<HTMLDivElement>,
-	HTMLDivElement
->) {
+} & ChatWithUsI &
+	React.DetailedHTMLProps<
+		React.HTMLAttributes<HTMLDivElement>,
+		HTMLDivElement
+	>) {
 	return (
 		<Containers.ColorContainer
 			varient="lightTomato"
