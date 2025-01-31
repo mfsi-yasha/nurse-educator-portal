@@ -40,7 +40,7 @@ function NavBar({
 		>
 			<img
 				src={headingImg}
-				alt=""
+				alt="ConnectPatient"
 				loading="lazy"
 				width={217}
 				height={24}
@@ -55,6 +55,7 @@ function NavBar({
 				<button
 					className="btn d-flex d-md-none justify-content-center align-items-center"
 					style={{ borderColor: "transparent" }}
+					data-testid="menu-btn-element"
 					onClick={() => {
 						setShowMenu(v => !v);
 					}}

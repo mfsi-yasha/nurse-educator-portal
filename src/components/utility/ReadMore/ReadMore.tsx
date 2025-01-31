@@ -16,12 +16,13 @@ function ReadMore({
 	return (
 		<button
 			className={`p-0 btn d-inline-flex justify-content-center align-items-center gap-2 ${styles.readMore} ${className ?? ""}`}
+			data-testid="botton-read-more"
 			{...props}
 		>
 			<span>{text}</span>
 			<img
 				src={vector}
-				alt=""
+				alt="vector"
 				loading="lazy"
 				width={10}
 				height={6}

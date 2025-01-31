@@ -11,13 +11,14 @@ function FAQButton({
 >) {
 	return (
 		<button
+			data-testid="faq-button-element"
 			className={`d-flex justify-content-between align-items-center p-0 btn ${styles.faqButton} ${className ?? ""}`}
 			{...props}
 		>
 			<span>{text}</span>
 			<img
 				src={vector}
-				alt=""
+				alt="vector"
 				loading="lazy"
 				width={14}
 				height={7}

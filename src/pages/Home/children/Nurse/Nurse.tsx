@@ -13,7 +13,7 @@ import useNurse from "src/hooks/home/useNurse";
  * A component that displays paragraphs of text related to nurse education services.
  * It handles loading, error, and empty states, and allows users to toggle the visibility of additional text.
  */
-function AllParagraphs() {
+export function AllParagraphs() {
 	const { nurseData, nurseFetchStatus } = useNurse();
 	const [showMore, setShowMore] = useState(false);
 

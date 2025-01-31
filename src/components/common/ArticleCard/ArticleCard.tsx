@@ -23,7 +23,7 @@ function ArticleCard({
 		>
 			<img
 				src={articleImgURL}
-				alt=""
+				alt="articleImg"
 				width={272.91}
 				height={160.26}
 				className={`${styles.articleImg}`}
@@ -38,11 +38,12 @@ function ArticleCard({
 				<img
 					src={goImg}
 					tabIndex={1}
-					alt=""
+					alt="goImg"
 					loading="lazy"
 					width={37}
 					height={37}
 					className={`p-0 ${styles.goImg}`}
+					onClick={handleGo}
 				/>
 			</div>
 		</Containers.ColorContainer>
